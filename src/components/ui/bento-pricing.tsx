@@ -16,9 +16,9 @@ type PricingCardProps = {
 function PricingCard({
   titleBadge,
   priceLabel,
-  priceSuffix = "/мес",
+  priceSuffix = "/урок",
   features,
-  cta = "Подписаться",
+  cta = "Записаться",
   className,
 }: PricingCardProps) {
   return (
@@ -91,7 +91,7 @@ export function BentoPricing() {
         </div>
         <div className="flex items-center gap-3 p-3">
           <Badge variant="secondary" className="bg-white/10 text-white border-white/20 font-open-sans-custom text-xs">
-            ПРЕМИУМ
+            ПОЛНЫЙ КУРС
           </Badge>
           <Badge
             variant="outline"
@@ -101,23 +101,23 @@ export function BentoPricing() {
           </Badge>
           <div className="ml-auto">
             <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
-              Подписаться
+              Записаться
             </Button>
           </div>
         </div>
         <div className="flex flex-col p-3 lg:flex-row">
           <div className="pb-2 lg:w-[30%]">
             <span className="font-mono text-3xl font-semibold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              2 000 ₽
+              4 900 ₽
             </span>
-            <span className="text-gray-300 text-xs font-open-sans-custom">/мес</span>
+            <span className="text-gray-300 text-xs font-open-sans-custom">/курс</span>
           </div>
           <ul className="text-gray-300 grid gap-2 text-xs lg:w-[70%] font-open-sans-custom">
             {[
-              "2 000 ₽ кредитов включено ежемесячно",
-              "Докупайте кредиты сверх месячного лимита",
-              "5x увеличенный лимит вложений",
-              "Импорт дизайнов из популярных инструментов",
+              "12 занятий — от Античности до Возрождения",
+              "Разборы шедевров с историями создания",
+              "Практические задания после каждого урока",
+              "Подходит для домашнего обучения и уроков ИЗО",
             ].map((f, i) => (
               <li key={i} className="flex items-center gap-2">
                 <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
@@ -129,50 +129,50 @@ export function BentoPricing() {
       </div>
 
       <PricingCard
-        titleBadge="СТАРТ"
+        titleBadge="ПРОБНЫЙ УРОК"
         priceLabel="0 ₽"
         features={[
-          "500 ₽ кредитов включено ежемесячно",
-          "Деплой приложений в облако",
-          "Визуальное редактирование",
-          "Синхронизация с Git",
+          "Один урок бесплатно",
+          "Введение в эпоху Возрождения",
+          "Подходит для 5–9 класса",
+          "Без регистрации и обязательств",
         ]}
         className="lg:col-span-3"
-        cta="Начать"
+        cta="Попробовать"
       />
 
       <PricingCard
-        titleBadge="КОМАНДА"
-        priceLabel="3 000 ₽"
-        priceSuffix="/чел/мес"
+        titleBadge="МИНИ-КУРС"
+        priceLabel="1 900 ₽"
+        priceSuffix="/курс"
         features={[
-          "3 000 ₽ кредитов на участника ежемесячно",
-          "Единый биллинг и управление командой",
-          "Общие чаты и совместная работа",
+          "4 занятия — эпоха Возрождения",
+          "Да Винчи, Микеланджело, Рафаэль",
+          "Удобный формат для домашнего изучения",
         ]}
         className="lg:col-span-4"
       />
 
       <PricingCard
-        titleBadge="БИЗНЕС"
-        priceLabel="10 000 ₽"
-        priceSuffix="/чел/мес"
-        features={["3 000 ₽ кредитов на участника ежемесячно", "Отключение обучения по умолчанию", "Полный доступ к API"]}
+        titleBadge="ДЛЯ КЛАССА"
+        priceLabel="9 900 ₽"
+        priceSuffix="/группа"
+        features={["До 30 учеников", "Адаптация под программу ИЗО", "Готовые материалы для учителя"]}
         className="lg:col-span-4"
       />
 
       <PricingCard
-        titleBadge="КОРПОРАЦИЯ"
+        titleBadge="ДЛЯ ШКОЛЫ"
         priceLabel="По запросу"
         priceSuffix=""
         features={[
-          "Отключение обучения по умолчанию",
-          "SAML SSO",
-          "Приоритетный доступ",
+          "Курс для нескольких классов",
+          "Методическое сопровождение",
+          "Сертификаты для учеников",
           "Персональная поддержка",
         ]}
         className="lg:col-span-8"
-        cta="Связаться"
+        cta="Обсудить"
       />
     </div>
   )
